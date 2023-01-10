@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/blog_dj_react/static/css/main.cbc34fa0.css",
+    "main.js": "/blog_dj_react/static/js/main.f75f54bd.js",
+    "static/media/logo.png": "/blog_dj_react/static/media/logo.c9242e508b090647529d.png",
+    "index.html": "/blog_dj_react/index.html",
+    "main.cbc34fa0.css.map": "/blog_dj_react/static/css/main.cbc34fa0.css.map",
+    "main.f75f54bd.js.map": "/blog_dj_react/static/js/main.f75f54bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbc34fa0.css",
+    "static/js/main.f75f54bd.js"
+  ]
+}
