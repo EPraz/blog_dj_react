@@ -16,13 +16,13 @@ function BlogList({
             {
                 blog_list ?
                 <>
-                <div className="relative bg-gray-50 pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8">
+                <div className="relative bg-gray-50 pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8 p-8">
                     <div className="absolute inset-0">
-                        <div className="bg-white h-1/3 sm:h-2/3" />
+                        <div className="bg-gray-50 h-1/3 sm:h-2/3" />
                     </div>
                     <div className="relative max-w-7xl mx-auto">
                         
-                        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+                        <div className="my-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                             {
                                 blog_list.map((post, index) => (
                                     <BlogCard key={index} data={post}/>
@@ -35,7 +35,9 @@ function BlogList({
                             count={count}
                         />
                     </div>
+
                 </div>
+                
                 </>
                 :
                 <LoadingCard/>

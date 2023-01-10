@@ -16,12 +16,12 @@ const BlogCategories = ({ get_categories, categories }) => {
             <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
               View Categories
             </h2>
-            <Link
+            {/* <Link
               to="#"
               className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
             >
               Browse all categories<span aria-hidden="true"> &rarr;</span>
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mt-4 flow-root">
@@ -29,15 +29,16 @@ const BlogCategories = ({ get_categories, categories }) => {
               <div className="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
                 <div className="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
                   {categories ? (
-                    categories.map((category) => (
+                    categories.map((category, index) => (
                       <Link
-                        key={category}
+                        key={index}
                         to={`/blog/categories/${category.id}`}
                         className="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto"
                       >
                         <span aria-hidden="true" className="absolute inset-0">
                           <img
-                            src={category.thumbnail}
+                            src={`http://localhost:8000${category.thumbnail}`}
+                            // src={category.thumbnail}
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
@@ -60,12 +61,12 @@ const BlogCategories = ({ get_categories, categories }) => {
           </div>
 
           <div className="mt-6 px-4 sm:hidden">
-            <Link
+            {/* <Link
               to="#"
               className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
             >
               Browse all categories<span aria-hidden="true"> &rarr;</span>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

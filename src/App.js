@@ -8,6 +8,8 @@ import Blog from 'containers/pages/blog/Blog'
 import BlogPost from 'containers/pages/blog/BlogPost'
 import BlogCategory from 'containers/pages/blog/category/BlogCategory'
 import Search from 'containers/pages/Search'
+import Contact from 'containers/pages/Contact'
+import Login from 'containers/pages/Login'
 
 const App = () => {
   return (
@@ -23,8 +25,12 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/post/:slug" element={<BlogPost />} />
           <Route path="/blog/categories/:category_id" element={<BlogCategory />} />
+          
+          <Route path="/blog/contact" element={<Contact />} />
+          <Route path="/blog/login" element={<Login />} />
 
           <Route path="/search/:term" element={<Search />} />
+          
         </Routes>
       </Router>
     </Provider>

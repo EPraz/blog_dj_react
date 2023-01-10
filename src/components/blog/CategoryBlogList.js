@@ -15,11 +15,13 @@ const BlogList = ({ blog_list, get_blog_list_page, count, category_id }) => {
                         <div className="bg-white h-1/3 sm:h-2/3" />
                     </div>
                     <div className="relative max-w-7xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-12 my-8 text-center">Projects we are proud of</h2>
+
                         
                         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
                             {
-                                blog_list.map(post=>(
-                                    <BlogCard data={post}/>
+                                blog_list.map((post, index) => (
+                                    <BlogCard key={index} data={post}/>
                                 ))
                             }
                         </div>

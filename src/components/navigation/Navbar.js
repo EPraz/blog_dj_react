@@ -4,11 +4,12 @@ import { Menu, Popover, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/solid";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { NavLink } from "react-router-dom";
-
+import logo from '../../assets/img/logo.png'
 const navigation = [
   { name: "Blog", href: "/blog", current: true },
-  { name: "About", href: "/about", current: false },
-  { name: "Contact", href: "/contact", current: false },
+  // { name: "About", href: "/blog/about", current: false },
+  { name: "Contact", href: "/blog/contact", current: false },
+  { name: "Login", href: "/blog/login", current: false },
 ];
 
 function classNames(...classes) {
@@ -43,15 +44,16 @@ const Navbar = () => {
       >
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
-                    <NavLink to="/">
+                    <NavLink to="/blog">
                       <img
                         className="block h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                        // src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
                         // src="https://w7.pngwing.com/pngs/402/203/png-transparent-picasa-encapsulated-postscript-logo-random-icons-miscellaneous-angle-text.png"
+                        src={logo}
                         // alt="Workflow"
                         alt="Logo"
                       />
@@ -105,17 +107,23 @@ const Navbar = () => {
                   >
                     Blog
                   </NavLink>
-                  <NavLink
-                    to="/about"
+                  {/* <NavLink
+                    to="/blog/about"
                     className={`mx-4 text-lg dark:hover:text-white hover:text-gray-900 text-gray-600 dark:text-dark-text text-md font-semibold`}
                   >
                     About
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
-                    to="/contact"
-                    className={`text-lg dark:hover:text-white hover:text-gray-900 text-gray-600 dark:text-dark-text text-md font-semibold`}
+                    to="/blog/contact"
+                    className={` mx-4 text-lg dark:hover:text-white hover:text-gray-900 text-gray-600 dark:text-dark-text text-md font-semibold`}
                   >
                     Contact
+                  </NavLink>
+                  <NavLink
+                    to="/blog/login"
+                    className={`text-lg dark:hover:text-white hover:text-gray-900 text-gray-600 dark:text-dark-text text-md font-semibold`}
+                  >
+                    Login
                   </NavLink>
                 </div>
               </div>
